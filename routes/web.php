@@ -13,8 +13,13 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Route::get('/top-ten-games', 'GamesController@topTenGames')->name('toptengames');
+
+Route::get('/', 'BikeLabsController@index')->name('home');
+
+// Modifications
+Route::get('/modification-home', 'ModificationController@index')->name('modification-home');
